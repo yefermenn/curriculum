@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="header">
+        <div>
+            <p Style="font-style: italic; font-size: 33px;">Hola! soy</p>
+            <p>Jefersson Alvarez</p>
+        </div>
+    </div>
+    <div id="espacio">
+        <div id="about">
+            <h1>Sobre Mí</h1>
+            <p>soy un estudiante de ingeniería de sistemas informáticos que quiere ser astronauta y fundar una grán organización</p>
+        </div>
+        <div id="educación">
+            <img src="imagenes/edu.png" alt="icono educacion">
+            <h1>EDUCACIÓN</h1>
+            <div>
+                <img src="imagenes/logoVectorizadoPEQUEO.png" alt="logo agustina">
+                <p>
+                    <strong>Formación basica y media:</strong> <br>
+                    bachiller técnico en contabilización de operaciones financieras y comerciales. Agustina Ferro. Colombia, 2020.
+                </p>
+            </div>
+            <div>
+                <img src="imagenes/LogoUFPS.png" alt="logo ufps">
+                <p>
+                    <strong>Formación profesional:</strong> <br>
+                    ingeniería de sistemas. Universidad Francisco de paula santander seccional Ocaña. Colombia, En curso.
+                </p>
+            </div>
+            <div>
+                <img src="imagenes/cursomoviles.png" alt="curso moviles">
+                <p>
+                    <Strong>Formación complementaria</Strong> <br>
+                    Curso de Desarrollo de Apps Móviles. Universidad Complutense de Madrid. Google Actívate. En curso.
+                </p>
+            </div>
+        </div>
+        <div id="Habilidades">
+            <img src="imagenes/habilidades.png" alt="logo habilidades">
+            <h1>HABILIDADES</h1>
+            <div>
+                <div><strong>JAVA</strong><img src="imagenes/javalogo.png" alt="csslogo"><div><div id="java"></div></div></div>
+                <div><strong>HTML</strong><img src="imagenes/html-5.png" alt="htmllogo"><div><div id="html"></div></div></div>
+                <div><strong>CSS</strong><img src="imagenes/css-3.png" alt="css logo"><div><div id="css"></div></div></div>
+                <div><strong>JAVASCRIPT</strong><img src="imagenes/js.png" alt="js logo"><div><div id="js"></div></div></div>
+                <div><strong>PYTHON</strong><img src="imagenes/python.png" alt="python logo"><div><div id="python"></div></div></div>
+                <div><strong>TAILWIND</strong><img src="imagenes/tailwind.png" alt="tailwind logo"><div><div id="tailwind"></div></div></div>
+                <div><strong>BOOTSTRAP</strong><img src="imagenes/bootstrap.png" alt="bootstrap logo"><div><div id="bootstrap"></div></div></div>
+                <div><strong>LARAVEL</strong><img src="imagenes/laravel.png" alt="laravel logo"><div><div id="laravel"></div></div></div>
+            </div>
+        </div>
+        <div id="proyectos">
+            <img src="imagenes/proyectos.png" alt="proyectos logo">
+            <h1>PROYECTOS</h1>
+        </div>
+    </div>
+    <script>
+        function setAlturaPant(nombre){
+            var tamaño = window.innerHeight;
+            document.getElementById(nombre).style.height=tamaño + 'px';
+        }
+        function parallaxEffect() {
+            var scrollPosition = window.pageYOffset;
+            var header = document.getElementById('header');
+            header.style.backgroundPositionY = (scrollPosition * 0.7) + 'px';
+        }
+
+        window.addEventListener('scroll', parallaxEffect);
+        window.onload=setAlturaPant('header');
+    </script>
+</body>
+</html>
