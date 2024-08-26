@@ -229,7 +229,7 @@ body{
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: #058ed9;
+    background-color: white;
 }
 #proyectos img{
     width: 80px;
