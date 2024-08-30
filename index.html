@@ -47,14 +47,24 @@
             <img src="imagenes/habilidades.png" alt="logo habilidades">
             <h1>HABILIDADES</h1>
             <div>
-                <div><strong>JAVA</strong><img src="imagenes/javalogo.png" alt="csslogo"><div><div id="java"></div></div></div>
-                <div><strong>HTML</strong><img src="imagenes/html-5.png" alt="htmllogo"><div><div id="html"></div></div></div>
-                <div><strong>CSS</strong><img src="imagenes/css-3.png" alt="css logo"><div><div id="css"></div></div></div>
-                <div><strong>JAVASCRIPT</strong><img src="imagenes/js.png" alt="js logo"><div><div id="js"></div></div></div>
-                <div><strong>PYTHON</strong><img src="imagenes/python.png" alt="python logo"><div><div id="python"></div></div></div>
-                <div><strong>TAILWIND</strong><img src="imagenes/tailwind.png" alt="tailwind logo"><div><div id="tailwind"></div></div></div>
-                <div><strong>BOOTSTRAP</strong><img src="imagenes/bootstrap.png" alt="bootstrap logo"><div><div id="bootstrap"></div></div></div>
-                <div><strong>LARAVEL</strong><img src="imagenes/laravel.png" alt="laravel logo"><div><div id="laravel"></div></div></div>
+                <div onclick="menuHabilidades()"><strong>TÉCNICAS</strong><img src="imagenes/tecnicas.png" alt="htecnicas logo"></div>
+                <div><strong>BLANDAS</strong><img src="imagenes/blandas.png" alt="hblandas logo"></div>
+                <div><strong>CREATIVAS</strong><img src="imagenes/creativas.png" alt="hcreativas"></div>
+                <div><strong>IDIOMÁTICAS</strong><img src="imagenes/language.png" alt="hidiomas logo"></div>
+            </div>
+        </div>
+        <div id="Tecnicas">
+            <img src="imagenes/habilidades.png" alt="logo habilidades">
+            <h1>TÉCNICAS</h1>
+            <div id="cajas">
+                <div class="caja"><strong>JAVA</strong><img src="imagenes/javalogo.png" alt="csslogo"><div><div id="java"></div></div></div>
+                <div class="caja"><strong>HTML</strong><img src="imagenes/html-5.png" alt="htmllogo"><div><div id="html"></div></div></div>
+                <div class="caja"><strong>CSS</strong><img src="imagenes/css-3.png" alt="css logo"><div><div id="css"></div></div></div>
+                <div class="caja"><strong>JAVASCRIPT</strong><img src="imagenes/js.png" alt="js logo"><div><div id="js"></div></div></div>
+                <div class="caja"><strong>PYTHON</strong><img src="imagenes/python.png" alt="python logo"><div><div id="python"></div></div></div>
+                <div class="caja"><strong>TAILWIND</strong><img src="imagenes/tailwind.png" alt="tailwind logo"><div><div id="tailwind"></div></div></div>
+                <div class="caja"><strong>BOOTSTRAP</strong><img src="imagenes/bootstrap.png" alt="bootstrap logo"><div><div id="bootstrap"></div></div></div>
+                <div class="caja"><strong>LARAVEL</strong><img src="imagenes/laravel.png" alt="laravel logo"><div><div id="laravel"></div></div></div>
             </div>
         </div>
         <div id="proyectos">
@@ -72,9 +82,29 @@
             var header = document.getElementById('header');
             header.style.backgroundPositionY = (scrollPosition * 0.7) + 'px';
         }
-
+        function menuHabilidades(){
+            var tecnicas= document.getElementById('Tecnicas');
+            if(tecnicas.classList.contains('mostrar')){
+                tecnicas.classList.remove('mostrar')
+            }else{
+                tecnicas.classList.add('mostrar')
+            }
+        }
+        function setLineas(){
+            var ancho = window.innerWidth;
+            if(ancho>1275){
+                document.documentElement.style.setProperty('--filas',3);
+            }else if(ancho<1275){
+                document.documentElement.style.setProperty('--filas',4);
+            }else if(ancho<854){
+                document.documentElement.style.setProperty('--filas',2);
+            }else if(ancho<433){
+                document.documentElement.style.setProperty('--filas',9);
+            }
+        }
         window.addEventListener('scroll', parallaxEffect);
         window.onload=setAlturaPant('header');
+        window.onload=setLineas();
     </script>
 </body>
 </html>
