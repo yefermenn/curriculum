@@ -47,14 +47,14 @@
             <img src="imagenes/habilidades.png" alt="logo habilidades">
             <h1>HABILIDADES</h1>
             <div>
-                <div onclick="menuHabilidades()"><strong>TÉCNICAS</strong><img src="imagenes/tecnicas.png" alt="htecnicas logo"></div>
-                <div><strong>BLANDAS</strong><img src="imagenes/blandas.png" alt="hblandas logo"></div>
-                <div><strong>CREATIVAS</strong><img src="imagenes/creativas.png" alt="hcreativas"></div>
-                <div><strong>IDIOMÁTICAS</strong><img src="imagenes/language.png" alt="hidiomas logo"></div>
+                <div onclick="menuHabilidades(1)" onmouseenter="hover(1)" onmouseleave="leave(1)" id="tcard"><strong>TÉCNICAS</strong><img src="imagenes/tecnicas.png" alt="htecnicas logo"></div>
+                <div onclick="menuHabilidades(2)" onmouseenter="hover(2)" onmouseleave="leave(2)" id="bcard"><strong>BLANDAS</strong><img src="imagenes/blandas.png" alt="hblandas logo"></div>
+                <div onclick="menuHabilidades(3)" onmouseenter="hover(3)" onmouseleave="leave(3)" id="ccard"><strong>CREATIVAS</strong><img src="imagenes/creativas.png" alt="hcreativas"></div>
+                <div onclick="menuHabilidades(4)" onmouseenter="hover(4)" onmouseleave="leave(4)" id="icard"><strong>IDIOMÁTICAS</strong><img src="imagenes/language.png" alt="hidiomas logo"></div>
             </div>
         </div>
         <div id="Tecnicas">
-            <img src="imagenes/habilidades.png" alt="logo habilidades">
+            <img src="imagenes/tecnicas.png" alt="logo habilidades">
             <h1>TÉCNICAS</h1>
             <div id="cajas">
                 <div class="caja"><strong>JAVA</strong><img src="imagenes/javalogo.png" alt="csslogo"><div><div id="java"></div></div></div>
@@ -67,44 +67,35 @@
                 <div class="caja"><strong>LARAVEL</strong><img src="imagenes/laravel.png" alt="laravel logo"><div><div id="laravel"></div></div></div>
             </div>
         </div>
+        <div id="Blandas">
+            <img src="imagenes/blandas.png" alt="logo blandas">
+            <h1>BLANDAS</h1>
+            <div>
+                <div class="tarjeta">
+                    <img src="imagenes/resoluproblemas.png" alt="resoluproblemas">
+                    <div>
+                        <p><Strong>Como resolver problemas y tomar deciciones con eficacia.</Strong></p>
+                        <p>University of california, Irvine.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Creativas">
+            <img src="imagenes/creativas.png" alt="logocreactivas">
+            <h1>CREATIVAS</h1>
+            <div>
+
+            </div>
+        </div>
+        <div id="Idiomaticas">
+            <img src="imagenes/language.png" alt="idiomaticas">
+            <H1>IDIOMATICAS</H1>
+        </div>
         <div id="proyectos">
             <img src="imagenes/proyectos.png" alt="proyectos logo">
             <h1>PROYECTOS</h1>
         </div>
     </div>
-    <script>
-        function setAlturaPant(nombre){
-            var tamaño = window.innerHeight;
-            document.getElementById(nombre).style.height=tamaño + 'px';
-        }
-        function parallaxEffect() {
-            var scrollPosition = window.pageYOffset;
-            var header = document.getElementById('header');
-            header.style.backgroundPositionY = (scrollPosition * 0.7) + 'px';
-        }
-        function menuHabilidades(){
-            var tecnicas= document.getElementById('Tecnicas');
-            if(tecnicas.classList.contains('mostrar')){
-                tecnicas.classList.remove('mostrar')
-            }else{
-                tecnicas.classList.add('mostrar')
-            }
-        }
-        function setLineas(){
-            var ancho = window.innerWidth;
-            if(ancho>1275){
-                document.documentElement.style.setProperty('--filas',3);
-            }else if(ancho<1275){
-                document.documentElement.style.setProperty('--filas',4);
-            }else if(ancho<854){
-                document.documentElement.style.setProperty('--filas',2);
-            }else if(ancho<433){
-                document.documentElement.style.setProperty('--filas',9);
-            }
-        }
-        window.addEventListener('scroll', parallaxEffect);
-        window.onload=setAlturaPant('header');
-        window.onload=setLineas();
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
