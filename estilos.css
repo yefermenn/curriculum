@@ -30,25 +30,25 @@ body{
 #about{
     margin-top: 40px;
     display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
 }
 #about h1{
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #0d1219;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: auto;
+    margin-right: auto;
     width:300px;
     margin-bottom: 17px;
     padding-bottom: 10px;
-    border-width: 3px;
     border-bottom: #0d1219;
-    border-right-color: white;
-    border-top-color: white;
-    border-left-color: white;
-    border-style: solid;
+    border-bottom-width: 2px;
+    border-right-style:hidden;
+    border-top-style:hidden;
+    border-left-style:hidden;
+    border-bottom-style: solid;
 }
 #about p{
     text-align: center;
@@ -57,52 +57,75 @@ body{
     font-family:'Arial Narrow', Arial, sans-serif;
     color:#515558;
     margin-bottom: 5px;
+    margin-left:auto;
+    margin-right: auto;
     padding-bottom:15px;
     border-style:none;
 }
-#educación h1{
-    width: 380px;
+#educación{
+    display:flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+#imagenAlterna{
+    width: 400px;
+    height: 500px;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-right: 8%;
+    margin-top: auto;
+    margin-bottom: auto;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
+}
+#EduTitulo h1{
+    width: 350px;
     margin: 17px auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #0d1219;
     display: flex;
 }
-#educación{
+#educación div{
     display: flex;
     flex-direction: column;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
 }
-#educación img{
+#EduTitulo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+#EduTitulo img{
     width: 80px;
     height: 80px;
-    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
-#educación h1::before, #educación h1::after{
+#EduTitulo h1::before, #EduTitulo h1::after{
     content: "";
     flex: 1;
     border-bottom: 2px solid #0d1219;
     margin: 0 10px;
     margin-bottom: 16px;
 }
-#educación div{
+#educación div div{
     display: flex;
-    width: 50%;
-    margin-top: 50px;
+    width: 60%;
+    margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
 }
-#educación div img{
-    width: 90px;
-    height: auto;
-    max-width: 100%;
+#educación div div img{
+    width: 50px;
+    height: 50px;
     object-fit: cover;
+    margin-bottom: 18px;
     
 }
-#educación p{
-    font-size: 20px;
+#educación div p{
+    font-size: 19px;
     font-family:'Arial Narrow', Arial, sans-serif;
     color:#515558;
-    margin-left: 30px;
     width: 100%;
 }
 #Habilidades{
@@ -119,7 +142,7 @@ body{
     margin-bottom: 0;
 }
 #Habilidades h1{
-    width: 380px;
+    width: 350px;
     margin: 17px auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #0d1219;
@@ -171,14 +194,14 @@ body{
 #Tecnicas.mostrar{
     max-height: 3000px;
 }
-#Tecnicas img{
+#tectitulo{
     width: 80px;
     height: 80px;
     margin: 27px auto;
     margin-bottom: 0;
 }
 #Tecnicas h1{
-    width: 380px;
+    width: 350px;
     margin: 17px auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #0d1219;
@@ -196,7 +219,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
 }
-#Tecnicas div div{
+.caja{
     display: flex;
     flex-direction: column;
     width: 180px;
@@ -206,18 +229,18 @@ body{
     border-radius: 1em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#Tecnicas div div strong{
+.caja strong{
     text-align: center;
     margin-bottom: 9px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #0d1219;
 }
-#Tecnicas div div img{
+.caja img{
     width: 80px;
     height: 80px;
-    margin-top: 0;
+    margin: 0 auto;
 }
-#Tecnicas div div div{
+.caja div{
     height: 18px;
     width: 80%;
     background-color: #c7c9edff;
@@ -226,60 +249,76 @@ body{
     border-radius: 5px;
     padding-left: 3px;
 }
-#Tecnicas #java{
+.caja #java{
     height: 12px;
     width: 56%;
     background-color: #058ed9;
-    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
     border-radius: 3px;
 }
-#Tecnicas #html{
+.caja #html{
     height: 12px;
     width: 95%;
     background-color: #058ed9;
-    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
     border-radius: 3px;
 }
-#Tecnicas #css{
+.caja #css{
     height: 12px;
     width: 50%;
     background-color: #058ed9;
-    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
     border-radius: 3px;
 }
-#Tecnicas #js{
+.caja #js{
     height: 12px;
     width: 20%;
     background-color: #058ed9;
-    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
     border-radius: 3px;
 }
-#Tecnicas #python{
+.caja #python{
     height: 12px;
     width: 0%;
     background-color: #058ed9;
-    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
     border-radius: 3px;
 }
-#Tecnicas #tailwind{
+.caja #tailwind{
     height: 12px;
     width: 20%;
     background-color: #058ed9;
-    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
     border-radius: 3px;
 }
-#Tecnicas #bootstrap{
+.caja #bootstrap{
     height: 12px;
     width: 0%;
     background-color: #058ed9;
-    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
     border-radius: 3px;
 }
-#Tecnicas #laravel{
+.caja #laravel{
     height: 12px;
     width: 0%;
     background-color: #058ed9;
-    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
     border-radius: 3px;
 }
 #Blandas{
@@ -301,7 +340,7 @@ body{
     margin-bottom: 0;
 }
 #Blandas h1{
-    width: 380px;
+    width: 350px;
     margin: 17px auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #0d1219;
@@ -359,14 +398,14 @@ body{
 #Creativas.mostrar{
     max-height: 3000px;
 }
-#Creativas img{
+#creaImg{
     width: 80px;
     height: 80px;
     margin: 27px auto;
     margin-bottom: 0;
 }
 #Creativas h1{
-    width: 380px;
+    width: 350px;
     margin: 17px auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #0d1219;
@@ -378,6 +417,19 @@ body{
     border-bottom: 2px solid #0d1219;
     margin: 0 10px;
     margin-bottom: 16px;
+}
+#Creativas div{
+    display: flex;
+    justify-content: center;
+}
+.caja #inkscape{
+    height: 12px;
+    width: 20%;
+    background-color: #058ed9;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    border-radius: 3px;
 }
 #Idiomaticas{
     overflow: hidden;
@@ -391,14 +443,14 @@ body{
 #Idiomaticas.mostrar{
     max-height: 3000px;
 }
-#Idiomaticas img{
+#idioIMG{
     width: 80px;
     height: 80px;
     margin: 27px auto;
     margin-bottom: 0;
 }
 #Idiomaticas h1{
-    width: 380px;
+    width: 350px;
     margin: 17px auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #0d1219;
@@ -410,6 +462,19 @@ body{
     border-bottom: 2px solid #0d1219;
     margin: 0 10px;
     margin-bottom: 16px;
+}
+#Idiomaticas div{
+    display: flex;
+    justify-content: center;
+}
+.caja #ingles{
+    height: 12px;
+    width: 60%;
+    background-color: #058ed9;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    border-radius: 3px;
 }
 #proyectos{
     width: 100%;
@@ -425,7 +490,7 @@ body{
     margin-bottom: 0;
 }
 #proyectos h1{
-    width: 380px;
+    width: 350px;
     margin: 17px auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #0d1219;
