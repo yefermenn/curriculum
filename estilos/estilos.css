@@ -3,21 +3,67 @@
     padding: 0;
     box-sizing: border-box;
 }
+nav{
+    position:absolute;
+    top: 0;
+    font-family: "Roboto";
+    width: 100%;
+    display: flex;
+    font-size: 14px;
+}
+.izquierda{
+    margin-top: 5px;
+    display: flex;
+    color: white;
+}
+.izquierda img{
+    width: 40px;
+    height: auto;
+    margin-left: 11px;
+}
+.izquierda p,.derecha a{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+    margin-right: 17px;
+    user-select: none;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.4s;
+    color: rgb(219, 219, 219);
+}
+.izquierda p{
+    color: white;
+}
+.derecha{
+    position: absolute;
+    right: 5px;
+    height: 100%;
+    display: flex;
+    font-weight:400;
+}
+.derecha a:hover{
+    color: white;
+    cursor:pointer;
+}
 #header{
     display:flex;
-    background-color: black;
     width: 100%;
-    background-image:url(imagenes/selfieContraluz.png);
+    background-image:url(../imagenes/selfieContraluz.png);
     background-size: cover;
     background-position: center;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 64px;
-    justify-content: center;
     align-items: center;
+    user-select: none;
 }
 #header div{
-    text-align: center;
+    text-align: start;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 body{
     margin: 0;

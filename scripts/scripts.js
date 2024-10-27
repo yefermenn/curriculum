@@ -1,5 +1,4 @@
 var abierto=false;
-var identificador=0;
 function setAlturaPant(nombre){
     var tamaño = window.innerHeight;
     document.getElementById(nombre).style.height=tamaño + 'px';
