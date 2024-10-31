@@ -22,8 +22,8 @@ nav{
     margin-left: 11px;
 }
 .izquierda p,.derecha a{
-    margin-top: auto;
-    margin-bottom: auto;
+    display: flex;
+    align-items: center;
     margin-left: 5px;
     margin-right: 17px;
     user-select: none;
@@ -31,6 +31,7 @@ nav{
     text-decoration: none;
     transition: 0.4s;
     color: rgb(219, 219, 219);
+    height: 100%;
 }
 .izquierda p{
     color: white;
@@ -45,6 +46,8 @@ nav{
 .derecha a:hover{
     color: white;
     cursor:pointer;
+    background-color:  rgba(255,255,255,0.1);
+    box-shadow: 0px 0px 13px 7px rgba(255,255,255,0.12);
 }
 #header{
     display:flex;
