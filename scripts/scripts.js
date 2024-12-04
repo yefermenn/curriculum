@@ -126,9 +126,5 @@ function leave(solicitud){
             break;
     }
 }
-var prueba=document.getElementById('circle2');
-prueba.addEventListener('click', function(){
-    alert("ola gente");
-});
 window.addEventListener('scroll', parallaxEffect);
 window.onload=setAlturaPant('header');
