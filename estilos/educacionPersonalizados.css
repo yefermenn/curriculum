@@ -1,0 +1,8 @@
+.visualizar{
+    visibility: visible;
+    opacity: 1;
+}
+.esconder{
+    visibility: hidden;
+    opacity: 0;
+}
