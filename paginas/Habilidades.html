@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HABILIDADES</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 d-flex flex-column justify-content-center align-items-center p-0" style="background-color: #0d1219;" id="menuLat">
+                <a href="../index.html" class="excluir"><img src="../imagenes/perfil.jpg" alt="perfil" class="m-2" style="max-width: 100px; max-height: 100px; border-radius: 50px;"></a>
+                <div class="w-100">
+                    <a href="sobreMi.html" class="d-block text-center py-2">SOBRE MÍ</a>
+                    <a href="Educación.html" class="d-block text-center py-2">EDUCACIÓN</a>
+                    <a class="d-block text-center py-2 excluir seleccionado">HABILIDADES</a>
+                    <a class="d-block text-center py-2">PROYECTOS</a>
+                    <a class="d-block text-center py-2">LOGROS</a>
+                    <a href="" class="d-block text-center py-2">CONTACTO</a>
+                </div>
+            </div>
+            <div class="col d-flex flex-column align-items-center justify-content-center">
+                <div class="row d-flex justify-content-center" style="transition: all .3s;">
+                    <div id="b1" onclick="intercambio(1)" class="col p-0 d-flex m-4 sobre" style="width: 180px; border-radius: 1em;border-width: 2px;  height: 180px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); cursor: pointer; transition: .3s;">
+                        <div class="mx-auto d-flex flex-column">
+                            <strong class="mx-auto d-flex align-items-end" style="height: 60px;">TECNICAS</strong>
+                            <img src="../imagenes/tecnicas.png" style="width: 80px; height: 80px;" class="mx-auto mt-2">
+                        </div>
+                    </div>
+                    <div onclick="intercambio(2)" class="col p-0 d-flex m-4 sobre" style="width: 180px; border-radius: 1em;border-width: 2px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); cursor: pointer; transition: .3s;">
+                        <div class="mx-auto d-flex flex-column">
+                            <strong class="mx-auto d-flex align-items-end" style="height: 60px;">BLANDAS</strong>
+                            <img src="../imagenes/blandas.png" style="width: 80px; height: 80px;" class="mx-auto mt-2">
+                        </div>
+                    </div>
+                    <div onclick="intercambio(3)" class="col p-0 d-flex m-4 sobre" style="width: 180px; border-radius: 1em;border-width: 2px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); cursor: pointer; transition: .3s;">
+                        <div class="mx-auto d-flex flex-column">
+                            <strong class="mx-auto d-flex align-items-end" style="height: 60px;">CREATIVAS</strong>
+                            <img src="../imagenes/creativas.png" style="width: 80px; height: 80px;" class="mx-auto mt-2">
+                        </div>
+                    </div>
+                    <div onclick="intercambio(4)" class="col p-0 d-flex m-4 sobre" style="width: 180px; border-radius: 1em;border-width: 2px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); cursor: pointer; transition: .3s;"> 
+                        <div class="mx-auto d-flex flex-column">
+                            <strong class="mx-auto d-flex align-items-end" style="height: 60px;">IDIOMAS</strong>
+                            <img src="../imagenes/language.png" style="width: 80px; height: 80px;" class="mx-auto mt-2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center" id="1" style="opacity: 0;height: 0; overflow: hidden; transition:all .3s ease;">
+                    <div class="col p-0 d-flex m-4 sobre" style="width: 180px; border-radius: 1em;border-width: 2px;  height: 180px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); cursor: pointer; transition: .3s;">
+                        <div class="mx-auto d-flex flex-column">
+                            <strong class="mx-auto d-flex align-items-end" style="height: 60px;">TECNICAS</strong>
+                            <img src="../imagenes/tecnicas.png" style="width: 80px; height: 80px;" class="mx-auto mt-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="../imagenes/powered bostrap.png" alt="marca de agua bootstrap" class="position-absolute bottom-0 end-0" style="width: 100px; height: auto;">
+
+</body>
+<style>
+    a{
+        text-decoration: none;
+        color: #dbdbdb;
+        transition: 0.3s;
+        user-select: none;
+        font-family: "Roboto";
+    }
+    a:hover:not(.excluir){
+        background-color: rgba(255, 255, 255, 0.1);
+        color:white;
+        cursor:pointer;
+    }
+    .seleccionado{
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .sobre:hover{
+        background-color: rgb(219, 219, 219);
+    }
+</style>
+<script src="../scripts/sobreMi.js"></script>
+<script src="../scripts/HabilidadesCambiador.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
