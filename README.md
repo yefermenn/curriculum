@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">✨ Creating bugs since 2003<br>📚 I'm currently learning laravel<br>🎯 Goals: I want to create a brand<br>🎲 Fun fact: I don't know how to play football</p>
+<p align="left">✨ Creating bugs since 2003<br>📚 I'm currently learning laravel<br>🎯 Goals: I want to create a brand<br>🎲 Fun fact: I don't know how to play football :D<br>🔗 this project live: www.jeferssonalvarez.com</p>
 
 ###
 
